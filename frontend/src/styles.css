@@ -1,0 +1,171 @@
+:root {
+  color: #e5eef8;
+  background: #0b1220;
+  font-family: Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #0b1220;
+}
+
+button, input, select, textarea {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  background: #2563eb;
+  color: white;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #334155;
+  background: #111827;
+  color: white;
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background: #020617;
+  padding: 1rem;
+  border-right: 1px solid #1e293b;
+}
+
+.brand {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.nav {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 0.7rem;
+  background: #1e293b;
+}
+
+.nav.active {
+  background: #2563eb;
+}
+
+.main {
+  padding: 1.25rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.token-state {
+  color: #93c5fd;
+}
+
+.banner {
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: #1d4ed8;
+  border-radius: 10px;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.stat-card, .card {
+  background: #111827;
+  border: 1px solid #1f2937;
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.stat-card span {
+  color: #93a6bd;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card strong {
+  font-size: 2rem;
+}
+
+.chart-grid, .grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.chart-card {
+  min-height: 320px;
+}
+
+.form-card form, .form-stack {
+  display: grid;
+  gap: 1rem;
+}
+
+.help-text, .muted {
+  color: #93a6bd;
+}
+
+.incident-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.incident-row {
+  display: grid;
+  grid-template-columns: 2fr 120px 120px;
+  gap: 1rem;
+  width: 100%;
+  text-align: left;
+  background: #0f172a;
+}
+
+.result-box, .raw-box {
+  background: #020617;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.comment-list {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.comment {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  padding: 0.75rem;
+}
+
+@media (max-width: 1000px) {
+  .shell { grid-template-columns: 1fr; }
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .chart-grid, .grid-two { grid-template-columns: 1fr; }
+  .incident-row { grid-template-columns: 1fr; }
+}
